@@ -3,6 +3,8 @@
  */
 package org.shubhchintak.api.service;
 
+import java.util.List;
+
 import org.shubhchintak.common.dto.UploadFileDTO;
 import org.shubhchintak.common.exception.ApiException;
 import org.shubhchintak.common.exception.ServiceException;
@@ -16,6 +18,8 @@ public interface UploadFileService {
 	UploadFileDTO addUploadFile(UploadFileDTO uploadFileDTO, long organizationId) throws ServiceException;
 	
 	UploadFileDTO getUploadFile(long uploadFileId, long organizationId) throws ServiceException;
+	
+	List<UploadFileDTO> getAllUploadFile(long organizationId) throws ServiceException;
 	
 	UploadFileDTO updateUploadFile(UploadFileDTO uploadFileDTO, long organizationId) throws ServiceException;
 	

@@ -17,8 +17,8 @@ import org.shubhchintak.persistence.entity.UserDetails;
 import org.shubhchintak.persistence.repository.RoleRepository;
 import org.shubhchintak.service.converter.base.BaseConverter;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
+//import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+//import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 /**
@@ -78,9 +78,9 @@ public class UserConverter implements BaseConverter<UserDTO, User> {
 			// UserDetails conversion
 			UserDetails userDetails =  userDetailsConverter.convertToEntity(dto,oganizationId);
 
-			PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+			//PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 			// Password Encoding
-			final String encodedPassword = passwordEncoder.encode(dto.getPassword().trim());
+			final String encodedPassword = dto.getPassword().trim();//passwordEncoder.encode(dto.getPassword().trim());
 
 			// find all selected roles
 			Set<Role> roles = roleRepository.findByRoleName(dto.getRoles());

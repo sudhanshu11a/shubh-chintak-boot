@@ -24,7 +24,7 @@ import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
-import org.springframework.security.core.context.SecurityContextHolder;
+//import org.springframework.security.core.context.SecurityContextHolder;
 
 /**
  * @author sudhanshusharma
@@ -256,14 +256,13 @@ public abstract class BaseEntity {
 	@PrePersist
 	public void prePersist() {
 		// current user information
-		UserPrincipal currentUserPrincipal = (UserPrincipal) SecurityContextHolder.getContext().getAuthentication()
-				.getPrincipal();
-		if (currentUserPrincipal == null) {
-			throw new NullPointerException("No current User Principal found in Auditing");
-		}
-		this.createdBy = currentUserPrincipal.getCurrentUserId();
+//		UserPrincipal currentUserPrincipal = null;//(UserPrincipal) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+//		if (currentUserPrincipal == null) {
+//			throw new NullPointerException("No current User Principal found in Auditing");
+//		}
+		this.createdBy = 1l;//currentUserPrincipal.getCurrentUserId();
 		this.createdDate = new Date();
-		this.organizationId = currentUserPrincipal.getOrganizationId();
+		this.organizationId = 1l;//currentUserPrincipal.getOrganizationId();
 		this.active = true;
 
 	}
@@ -271,12 +270,11 @@ public abstract class BaseEntity {
 	@PreUpdate
 	public void preUpdate() {
 		// current user information
-		UserPrincipal currentUserPrincipal = (UserPrincipal) SecurityContextHolder.getContext().getAuthentication()
-				.getPrincipal();
-		if (currentUserPrincipal == null) {
-			throw new NullPointerException("No current User Principal found in Auditing");
-		}
-		this.modifiedBy = currentUserPrincipal.getCurrentUserId();
+//		UserPrincipal currentUserPrincipal = null;//(UserPrincipal) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+//		if (currentUserPrincipal == null) {
+//			throw new NullPointerException("No current User Principal found in Auditing");
+//		}
+		this.modifiedBy = 1l;//currentUserPrincipal.getCurrentUserId();
 		this.modifiedDate = new Date();
 	}
 

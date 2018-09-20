@@ -7,7 +7,7 @@ import java.util.Optional;
 
 import org.shubhchintak.common.dto.UserPrincipal;
 import org.springframework.data.domain.AuditorAware;
-import org.springframework.security.core.context.SecurityContextHolder;
+//import org.springframework.security.core.context.SecurityContextHolder;
 
 /**
  * @author sudhanshusharma
@@ -22,7 +22,7 @@ public class CurrentUserAuditorAware implements AuditorAware<Long> {
 	public Optional<Long> getCurrentAuditor() {
 		
 		//current user information
-		UserPrincipal currentUserPrincipal = (UserPrincipal) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		UserPrincipal currentUserPrincipal = null;//(UserPrincipal) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		if(currentUserPrincipal==null){
 			throw new NullPointerException("No current User Principal found in Auditing");
 		}

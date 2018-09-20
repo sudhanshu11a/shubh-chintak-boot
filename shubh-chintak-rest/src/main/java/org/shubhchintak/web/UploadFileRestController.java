@@ -34,6 +34,14 @@ public class UploadFileRestController {
 		
 	}
 	
+	@GetMapping("/all-upload-files")
+	public List<UploadFileDTO> getAllUploadFile(){
+		List<UploadFileDTO> uploadFileDTOs = uploadFileService.getAllUploadFile(organizationId);
+		return uploadFileDTOs;
+		
+	}
+	
+	
 	@PostMapping("/add-upload-file")
 	public UploadFileDTO addUploadFile(UploadFileDTO uploadFileDTO) {
 		uploadFileDTO = uploadFileService.addUploadFile(uploadFileDTO, organizationId);

@@ -5,14 +5,5 @@
     <artifactId>shubh-chintak</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>shubh-chintak-api</artifactId>
-  	<dependencies>
-		<!-- Shubhchintak common -->
-		<dependency>
-			<groupId>org.sudhanshu.ngo</groupId>
-			<artifactId>shubh-chintak-common</artifactId>
-		</dependency>
-
-
-	</dependencies>
+  <artifactId>shubh-chintak-auth-jwt</artifactId>
 </project>

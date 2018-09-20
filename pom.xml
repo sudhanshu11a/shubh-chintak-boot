@@ -18,7 +18,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-		<shubhchintak.version>1.0</shubhchintak.version>
+		<shubhchintak.version>0.0.1-SNAPSHOT</shubhchintak.version>
 		<tiles.version>3.0.5</tiles.version>
 	</properties>
 	<modules>
@@ -27,6 +27,7 @@
 		<module>shubh-chintak-api</module>
 		<module>shubh-chintak-service</module>
 		<module>shubh-chintak-rest</module>
+		<module>shubh-chintak-auth-jwt</module>
 	</modules>
 
 
@@ -36,28 +37,28 @@
 			<!-- Shubhchintak -->
 			<dependency>
 				<groupId>org.sudhanshu.ngo</groupId>
-				<artifactId>shubh-chintak-backend-common</artifactId>
+				<artifactId>shubh-chintak-common</artifactId>
 				<version>${shubhchintak.version}</version>
 			</dependency>
 
 			<!-- Shubhchintak Service -->
 			<dependency>
 				<groupId>org.sudhanshu.ngo</groupId>
-				<artifactId>shubh-chintak-backend-service</artifactId>
+				<artifactId>shubh-chintak-service</artifactId>
 				<version>${shubhchintak.version}</version>
 			</dependency>
 
 			<!-- Shubhchintak Service API -->
 			<dependency>
 				<groupId>org.sudhanshu.ngo</groupId>
-				<artifactId>shubh-chintak-backend-api</artifactId>
+				<artifactId>shubh-chintak-api</artifactId>
 				<version>${shubhchintak.version}</version>
 			</dependency>
 
 			<!-- Shubhchintak Persistence -->
 			<dependency>
 				<groupId>org.sudhanshu.ngo</groupId>
-				<artifactId>shubh-chintak-backend-persistence</artifactId>
+				<artifactId>shubh-chintak-persistence</artifactId>
 				<version>${shubhchintak.version}</version>
 			</dependency>
 

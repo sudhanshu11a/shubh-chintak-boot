@@ -14,7 +14,7 @@
 		<!-- Shubhchintak common -->
 		<dependency>
 			<groupId>org.sudhanshu.ngo</groupId>
-			<artifactId>shubh-chintak-backend-common</artifactId>
+			<artifactId>shubh-chintak-common</artifactId>
 		</dependency>
 
 		<dependency>
@@ -27,11 +27,6 @@
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
 
-		<!-- MySQL -->
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-		</dependency>
 
 	</dependencies>
 </project>

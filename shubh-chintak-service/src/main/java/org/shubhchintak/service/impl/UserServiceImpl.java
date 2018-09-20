@@ -19,8 +19,8 @@ import org.shubhchintak.service.converter.UserConverter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
+//import org.springframework.security.core.userdetails.UserDetails;
+//import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -63,26 +63,26 @@ public class UserServiceImpl implements UserService {
 		return userDTO;
 	}
 
-	@Override
-	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		List<User> users = null;
-		User user = null;
-		UserDetails userDetails;
-		try {
-			users = userRepository.findByUserName(username);
-			if (users == null || users.isEmpty()) {
-				throw new UsernameNotFoundException(username);
-			}
-			user = users.get(0);
-			OrganizationDTO organizationDTO = organizationConverter.convertToDTO(user.getOrganization());
-			UserDTO userDTO = userConverter.convertToDTO(user);
-			userDetails = new UserPrincipal(userDTO, organizationDTO);
-		} finally {
-			user = null;
-			users = null;
-		}
-		return userDetails;
-	}
+//	@Override
+//	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+//		List<User> users = null;
+//		User user = null;
+//		UserDetails userDetails;
+//		try {
+//			users = userRepository.findByUserName(username);
+//			if (users == null || users.isEmpty()) {
+//				throw new UsernameNotFoundException(username);
+//			}
+//			user = users.get(0);
+//			OrganizationDTO organizationDTO = organizationConverter.convertToDTO(user.getOrganization());
+//			UserDTO userDTO = userConverter.convertToDTO(user);
+//			userDetails = new UserPrincipal(userDTO, organizationDTO);
+//		} finally {
+//			user = null;
+//			users = null;
+//		}
+//		return userDetails;
+//	}
 
 	@Override
 	public void createUser(UserDTO userDTO) throws ApiException {

@@ -18,13 +18,13 @@
 		<!-- Shubhchintak API -->
 		<dependency>
 			<groupId>org.sudhanshu.ngo</groupId>
-			<artifactId>shubh-chintak-backend-api</artifactId>
+			<artifactId>shubh-chintak-api</artifactId>
 		</dependency>
 
 		<!-- Shubhchintak Service -->
 		<dependency>
 			<groupId>org.sudhanshu.ngo</groupId>
-			<artifactId>shubh-chintak-backend-service</artifactId>
+			<artifactId>shubh-chintak-service</artifactId>
 		</dependency>
 
 		<dependency>

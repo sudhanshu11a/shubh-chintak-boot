@@ -12,19 +12,19 @@
 		<!-- Shubhchintak common -->
 		<dependency>
 			<groupId>org.sudhanshu.ngo</groupId>
-			<artifactId>shubh-chintak-backend-common</artifactId>
+			<artifactId>shubh-chintak-common</artifactId>
 		</dependency>
 
 		<!-- Shubhchintak API -->
 		<dependency>
 			<groupId>org.sudhanshu.ngo</groupId>
-			<artifactId>shubh-chintak-backend-api</artifactId>
+			<artifactId>shubh-chintak-api</artifactId>
 		</dependency>
 
 		<!-- Shubhchintak persistence -->
 		<dependency>
 			<groupId>org.sudhanshu.ngo</groupId>
-			<artifactId>shubh-chintak-backend-persistence</artifactId>
+			<artifactId>shubh-chintak-persistence</artifactId>
 		</dependency>
 
 	</dependencies>

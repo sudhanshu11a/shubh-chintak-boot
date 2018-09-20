@@ -3,6 +3,8 @@
  */
 package org.shubhchintak.service.impl;
 
+import java.util.List;
+
 import javax.transaction.Transactional;
 
 import org.shubhchintak.api.service.UploadFileService;
@@ -53,6 +55,19 @@ public class UploadFileServiceImpl implements UploadFileService {
 			throw new ServiceException(e.getMessage(),e);
 		}
 		return uploadFileDTO;
+	}
+	
+	@Override
+	public List<UploadFileDTO> getAllUploadFile(long organizationId) throws ServiceException{
+		List<UploadFileDTO> uploadFileDTOs = null;
+		List<UploadFile> uploadFiles = null;
+		try {
+			uploadFiles = uploadFileRepository.findByOrganizationId( organizationId);
+			uploadFileDTOs = uploadFileConverter.convertToDTOList(uploadFiles);
+		}catch(Exception e) {
+			throw new ServiceException(e.getMessage(),e);
+		}
+		return uploadFileDTOs;
 	}
 
 	@Override
